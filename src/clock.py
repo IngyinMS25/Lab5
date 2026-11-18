@@ -2,10 +2,6 @@ import time
 from threading import Thread
 from hal import hal_lcd as LCD
 
-local_time = time.localtime() # get struct_time
-time_string = time.strftime("%H:%M:%S", local_time)
-date_string = time.strftime("%d:%m:%Y", local_time)
-
 def clock_thread():
     lcd = LCD.lcd()
     colon_toggle = True  # Used to alternate between ':' and ' ' for REQ-02
